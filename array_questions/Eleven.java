@@ -6,7 +6,7 @@ class Eleven{
 	public static void main(String[] args){
 		int[] arr = {1,1,1};
 		int k = 2;
-		System.out.println("Longest Subarray Length with sum K: " + countSubarray(arr,k));
+		System.out.println("Count Subarray Length with sum K: " + countSubarray(arr,k));
 	}
 	public static int countSubarray(int[] arr,int k){
 		Map<Integer,Integer> map = new HashMap<>();
