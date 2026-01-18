@@ -1,5 +1,12 @@
 import java.util.Random;
 
+// Atomic Operations
+// Assignments to primitive types (excluding double and long)
+// Assignments to references
+// Assignments to double and long using volatile keywords
+// Metrics capturing Use Case
+// Knowledge about atomic operations is key to high performance
+
 class Metrics{
 	private long count = 0;
 	private volatile double average = 0.0;
