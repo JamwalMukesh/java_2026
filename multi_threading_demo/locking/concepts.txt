@@ -1,0 +1,3 @@
+Locking Strategy
+- Fine Grained Locking (lock on every shared resource)
+- Coarse Grained Locking (One lock to complete class)

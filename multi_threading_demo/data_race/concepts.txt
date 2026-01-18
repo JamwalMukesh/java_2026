@@ -1,1 +1,18 @@
-concepts
+Two problems with Multithreaded applications
+- Race Conditions
+- Data Race
+Both involve
+- Multiple threads
+- At least one is modifying a shared variable
+Both problems may result in unexpected and incorrect results
+
+Solution
+- Synchronized: Solves both Race Condition and Data Race. But has a performance penalty.
+- Volatile
+  - Solves Race Condition for read/write from/to long and double
+  - Solves all Data Races by guaranteeing order
+
+Rule of Thumb
+- Every shared variable (modified by at least one thread) should be either
+  - Guarded by a synchronized block (or any type of lock)
+  - Declared volatile
