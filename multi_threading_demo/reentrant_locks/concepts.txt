@@ -1,0 +1,20 @@
+ReentrantLock
+- Works just like the synchronized keyword applied on an object
+- Requires explicit locking and unlocking
+
+It has Query methods - For Testing
+- getQueuedThreads() Returns a list of threads waiting to acquire a lock
+- getOwner() Returns the thread that currently owns the lock
+- isHeldByCurrentThread() Queries if the lock is held by the current thread
+- isLocked() queries if the lock is held by any thread
+
+Every production code needs to thoroughly tested.
+Another area where ReentrantLock shines is the control over the lock's fairness
+
+tryLock() method
+- Under no circumstances does the tryLock() method block!
+- Regardless of the state of the lock, it always returns immediately
+
+Use Cases
+- Real Time applications where suspending a thread on a lock() methods is unacceptable
+- Video/Image processing, High Speed/Low latency trading systems, User interface applications
