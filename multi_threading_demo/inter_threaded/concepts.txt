@@ -1,0 +1,23 @@
+Semaphore
+- Can be used to restrict the number of "users" to a particular resource or a group of resources
+- Unlike the locks that allows only one "user" per resource
+- The semaphore can restrict any given number of users to a resource
+
+Difference with Locks
+- Semaphore doesn't have a notion of owner thread
+- Many threads can acquire a permit
+- The same thread can acquire the semaphore multiple times
+- The binary semaphore (initialized with 1) is not reentrant
+- Semaphore can be released by another thread
+
+Condition.await()
+- unlock lock, wait until singalled
+
+Condition.signal()
+- wakes up a single thread, waiting on condition variable
+- A thread that wakes up has to reacquire the lock associated with the condition variable
+- If currently no thread is waiting on the condition variable, the signal method doesn't do anything
+
+Condition.singalAll()
+- Broadcast a signal to all threads currently waiting on the condition variable
+- doesn't need to know how many (if at all) threads are waiting for the condition variable
